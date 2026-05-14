@@ -1,0 +1,34 @@
+---
+const title = "About Me";
+---
+<style>
+  h1 {
+    color: blue;
+  }
+
+</style>
+
+<h1>Hello</h1>
+
+
+<html>
+  <body>
+    <h1>Roya Assadollahi</h1>
+    <p>B.A. Archaeology
+    M.A. Ancient and Middle Iranian Languages and Culture
+    M.A Iranian Studies (to be continued)
+    Core interests: Religious Studies and Digital Humanities
+    Assistant: CAB project, Freie Univärsitat Berlin (2023-2025)
+    </p>
+  </body>
+</html>
+---
+import Header from "../components/Header.astro";
+---
+
+<Header />
+
+<h1>Homepage</h1>
+---
+import "../styles/global.css";
+---
