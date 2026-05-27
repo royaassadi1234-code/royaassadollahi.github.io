@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<div class="container">
+			<section class="experience-section">
+				<h1>Experience</h1>
+				<div class="experience-list">
+					<!-- Add your experience entries here -->
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		flex: 1;
+		max-width: 1200px;
+		margin: 0 auto;
+		width: 100%;
+		padding: 2rem 1rem;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.experience-section {
+		background: white;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.experience-section h1 {
+		color: #333;
+		margin-bottom: 2rem;
+		font-size: 2.5rem;
+	}
+
+	.experience-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.experience-item {
+		padding: 1.5rem;
+		border-left: 4px solid #4a9eff;
+		background-color: #f9f9f9;
+		border-radius: 0.25rem;
+	}
+
+	.experience-item h3 {
+		color: #333;
+		margin: 0 0 0.5rem 0;
+		font-size: 1.3rem;
+	}
+
+	.experience-item .company {
+		color: #4a9eff;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.experience-item .date {
+		color: #999;
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+
+	.experience-item p {
+		color: #555;
+		margin: 0;
+		line-height: 1.6;
+	}
+</style>

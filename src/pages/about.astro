@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<div class="container">
+			<section class="about-section">
+				<div class="about-container">
+					<div class="profile-image">
+						<img src="https://www.geschkult.fu-berlin.de/e/iranistik/mitarbeiter/ehemalige/Roya-Assadollahi/IMG_20230522_112720.jpg?width=500" alt="Roya Assadollahi" />
+					</div>
+					<div class="about-info">
+						<h1>Roya Assadollahi</h1>
+						<div class="about-content">
+							<div class="about-text">
+								<h2>Education</h2>
+								<ul>
+									<li>B.A. Archaeology</li>
+									<li>M.A. Ancient and Middle Iranian Languages and Culture</li>
+									<li>M.A Iranian Studies (to be continued)</li>
+								</ul>
+
+								<h2>Core Interests</h2>
+								<p>Religious Studies and Digital Humanities</p>
+
+								<h2>Experience</h2>
+								<p><strong>Assistant</strong> - CAB project, Freie Universität Berlin (2023-2025)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		flex: 1;
+		max-width: 1200px;
+		margin: 0 auto;
+		width: 100%;
+		padding: 2rem 1rem;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.about-section {
+		background: white;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.about-container {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	@media (max-width: 768px) {
+		.about-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	.profile-image {
+		position: sticky;
+		top: 2rem;
+	}
+
+	.profile-image img {
+		width: 100%;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	}
+
+	.about-info h1 {
+		color: #333;
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+	}
+
+	.about-content {
+		line-height: 1.8;
+		color: #555;
+	}
+
+	.about-text {
+		font-size: 1rem;
+		line-height: 1.8;
+	}
+
+	.about-text h2 {
+		color: #4a9eff;
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.about-text ul {
+		margin-left: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.about-text li {
+		margin-bottom: 0.5rem;
+		color: #555;
+	}
+
+	.about-text p {
+		margin-bottom: 1rem;
+		color: #555;
+	}
+</style>
