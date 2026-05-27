@@ -5,12 +5,55 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<main>
 		<div class="container">
-			<section class="hero">
-				<h1>Welcome to My CV</h1>
-				<p>Explore my professional profile and experience</p>
-				<div class="cta-buttons">
-					<a href="/about" class="btn btn-primary">About Me</a>
-					<a href="/contact" class="btn btn-secondary">Get In Touch</a>
+			<section class="topics">
+				<div class="topic-card">
+					<div class="topic-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+						<div class="image-placeholder">🔥</div>
+					</div>
+					<div class="topic-content">
+						<h2>Zoroastrianism</h2>
+						<p>One of the world's oldest monotheistic religions, Zoroastrianism originated in ancient Iran and profoundly influenced later religious traditions. Its teachings on cosmic dualism, the battle between good and evil, and the ultimate triumph of good have shaped philosophical and religious thought for millennia.</p>
+					</div>
+				</div>
+
+				<div class="topic-card">
+					<div class="topic-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+						<div class="image-placeholder">👑</div>
+					</div>
+					<div class="topic-content">
+						<h2>Sasanian Empire</h2>
+						<p>The Sasanian Persian Empire (224-651 CE) was one of the most significant empires in human history. Known for its sophisticated administration, cultural achievements, and military prowess, it played a crucial role in the development of Persian civilization and international trade.</p>
+					</div>
+				</div>
+
+				<div class="topic-card">
+					<div class="topic-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+						<div class="image-placeholder">📖</div>
+					</div>
+					<div class="topic-content">
+						<h2>Avesta</h2>
+						<p>The Avesta is the sacred text of Zoroastrianism, containing hymns, prayers, and legal passages attributed to the prophet Zoroaster. As one of the oldest known religious texts, it provides invaluable insights into ancient Iranian religion, society, and language.</p>
+					</div>
+				</div>
+
+				<div class="topic-card">
+					<div class="topic-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+						<div class="image-placeholder">✍️</div>
+					</div>
+					<div class="topic-content">
+						<h2>Middle Persian Corpus</h2>
+						<p>The Middle Persian (Pahlavi) corpus represents the linguistic and literary heritage of the Sasanian period. These texts, written in various scripts, preserve important religious, administrative, and literary works that illuminate the intellectual and cultural life of ancient Iran.</p>
+					</div>
+				</div>
+
+				<div class="topic-card">
+					<div class="topic-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+						<div class="image-placeholder">📚</div>
+					</div>
+					<div class="topic-content">
+						<h2>Shahname</h2>
+						<p>The Shahname (Book of Kings), composed by Firdausi in the 10th century, is the world's longest epic poem. It chronicles the mythological and historical kings of Persia, preserving ancient Persian legends, heroic tales, and cultural values in magnificent poetic form.</p>
+					</div>
 				</div>
 			</section>
 		</div>
@@ -30,56 +73,60 @@ import Layout from '../layouts/Layout.astro';
 		width: 100%;
 	}
 
-	.hero {
-		text-align: center;
-		padding: 3rem 0;
+	.topics {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 
-	.hero h1 {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		color: #333;
-	}
-
-	.hero p {
-		font-size: 1.2rem;
-		color: #666;
-		margin-bottom: 2rem;
-	}
-
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.btn {
-		padding: 0.75rem 1.5rem;
+	.topic-card {
+		display: grid;
+		grid-template-columns: 350px 1fr;
+		gap: 2rem;
+		background: white;
+		padding: 2rem;
 		border-radius: 0.5rem;
-		text-decoration: none;
-		font-weight: 600;
-		transition: all 0.3s;
-		display: inline-block;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		align-items: start;
+		transition: box-shadow 0.3s;
 	}
 
-	.btn-primary {
-		background-color: #4a9eff;
-		color: white;
+	.topic-card:hover {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 	}
 
-	.btn-primary:hover {
-		background-color: #2e7fd1;
-		transform: translateY(-2px);
+	@media (max-width: 768px) {
+		.topic-card {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
 	}
 
-	.btn-secondary {
-		background-color: #e0e0e0;
+	.topic-image {
+		width: 100%;
+		height: 300px;
+		border-radius: 0.5rem;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.image-placeholder {
+		font-size: 5rem;
+	}
+
+	.topic-content h2 {
 		color: #333;
+		font-size: 1.8rem;
+		margin: 0 0 1rem 0;
+		color: #4a9eff;
 	}
 
-	.btn-secondary:hover {
-		background-color: #d0d0d0;
-		transform: translateY(-2px);
+	.topic-content p {
+		color: #555;
+		line-height: 1.8;
+		font-size: 1rem;
+		margin: 0;
 	}
 </style>
